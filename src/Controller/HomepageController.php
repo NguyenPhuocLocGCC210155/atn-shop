@@ -10,7 +10,7 @@ use Symfony\Component\Security\Core\Security;
 
 class HomepageController extends AbstractController
 {
-    #[Route('/homepage', name: 'app_homepage')]
+    #[Route('/index', name: 'app_homepage')]
     public function home(Security $security, ProductRepository $pro): Response
     {
         if($security->isGranted('IS_AUTHENTICATED_FULLY'))
