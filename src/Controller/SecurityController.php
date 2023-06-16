@@ -28,7 +28,7 @@ class SecurityController extends AbstractController
             'last_username' => $lastUsername, 
             'error' => $error,
             'user' => $user,
-            'product'=>$product
+            'proudct'=>$product
         ]);
         // return $this->json($user);
     }
