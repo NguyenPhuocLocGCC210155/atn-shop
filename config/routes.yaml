@@ -9,5 +9,5 @@ login:
   path: /login
   controller: App\Controller\SercurityController::login 
 index:
-    path: /index
-    controller: App\Controller\HomepageController::index
+  path: /
+  controller: App\Controller\HomepageController::home
