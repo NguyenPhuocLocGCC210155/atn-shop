@@ -8,6 +8,3 @@ kernel:
 index:
   path: /
   controller: App\Controller\HomepageController::home
-app_search:
-    path: /search
-    controller: App\Controller\YourController::search
