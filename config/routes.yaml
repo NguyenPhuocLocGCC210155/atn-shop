@@ -5,9 +5,9 @@ controllers:
 kernel:
     resource: ../src/Kernel.php
     type: annotation
-login:
-  path: /login
-  controller: App\Controller\SercurityController::login 
 index:
   path: /
   controller: App\Controller\HomepageController::home
+app_search:
+    path: /search
+    controller: App\Controller\YourController::search

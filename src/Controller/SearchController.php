@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class SearchController extends AbstractController
 {
-    #[Route('search', name: 'app_search')]
+    #[Route('/search', name: 'app_search')]
     public function search(ProductRepository $product, Request $req): Response
     {
         $lastUsername = " ";
