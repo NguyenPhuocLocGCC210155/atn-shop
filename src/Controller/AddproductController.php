@@ -59,7 +59,7 @@ class AddproductController extends AbstractController
         $productID = $product->findOneBy(['name' => $pName]);
         $ID = $productID->getId();
         $storage->addStorage($pQuantity, $formattedDate,$pPrice,$store,$ID,$user);
-        return $this->json($formattedDate);
-        // return $this->redirectToRoute('app_login');
+        // return $this->json($formattedDate);
+        return $this->redirectToRoute('app_login');
     }
 }
