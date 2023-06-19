@@ -54,12 +54,12 @@ class AddproductController extends AbstractController
         $user = $request->request->get('userID');
         $store = $request->request->get('storeID');
         $currentDate = new \DateTime();
-        $formattedDate = $currentDate->format('d/m/Y');
+        $formattedDate = $currentDate->format('Y-m-d');
         $product->addProduct($pName,$pImg,$pPrice,$pDes,$pQuantity,$pCat,$pSup);
         $productID = $product->findOneBy(['name' => $pName]);
         $ID = $productID->getId();
         $storage->addStorage($pQuantity, $formattedDate,$pPrice,$store,$ID,$user);
-        // return $this->json($store);
-        return $this->redirectToRoute('app_login');
+        return $this->json($formattedDate);
+        // return $this->redirectToRoute('app_login');
     }
 }
